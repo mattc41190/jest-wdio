@@ -8,7 +8,7 @@ module.exports = {
     connectionRetryCount: 3,
 
     // Webdriverio Logging Options
-    logLevel: 'silent', // Note: Verbose logs collected at `wdio-command-logs`
+    logLevel: 'silent', // Note: Verbose logs collected at `command.logs`
     coloredLogs: true,
     logOutput: './test/command.logs',
 

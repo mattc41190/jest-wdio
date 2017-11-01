@@ -24,10 +24,5 @@ module.exports = {
     screenShotPath: './test/browser-error-shots',
     screenshotOnReject: true,
     waitforTimeout: 5000,
-    waitforInterval: 500,
-
-    // CUSTOM OPTIONS - Note: these options will be ignored by webdriverio
-
-    // Browser Option
-    resolution: { width: 1000, height: 800 }
+    waitforInterval: 500  
 }

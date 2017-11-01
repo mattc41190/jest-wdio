@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run log-clean && jest test",
+    "test:sauce": "npm run log-clean && jest test sauce",
     "log-clean": "rm -rf ./test/command.logs",
     "sel-server": "selenium-standalone install && selenium-standalone start"
   },

@@ -1,2 +1,6 @@
+# Directories to exclude
 node_modules
 test/command.logs
+
+# Files to exclude
+test/credentials.json

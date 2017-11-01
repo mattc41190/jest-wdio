@@ -10,7 +10,7 @@ function searchBox(client) {
 
 function setSearchBox(client, value) {
     return searchBox(client)
-        .waitUntil(searchBox(client).isVisible()).then((visible) => {
+        .waitUntil(searchBox(client).isVisible()).then(() => {
             return searchBox(client).setValue(value);
         });
 }

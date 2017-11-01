@@ -1,0 +1,20 @@
+{
+  "name": "jest-wdio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run log-clean && jest test",
+    "log-clean": "rm -rf ./test/command.logs",
+    "sel-server": "selenium-standalone install && selenium-standalone start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "jest-cli": "^21.2.1",
+    "selenium-standalone": "^6.11.0",
+    "webdriverio": "^4.8.0"
+  }
+}

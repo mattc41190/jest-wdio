@@ -8,14 +8,6 @@ function searchBox(client) {
     return client.element(selectors.searchBox);
 }
 
-// Broken Here: (Not Broken in WDIO Runner)
-function setSearchBoxv1(client, value) {
-    return searchBox(client)
-        .waitForVisible().then((visible) => {
-            return client.element(selectors.searchBox).setValue(value);
-        });
-}
-
 function setSearchBox(client, value) {
     return searchBox(client)
         .waitUntil(searchBox(client).isVisible()).then((visible) => {

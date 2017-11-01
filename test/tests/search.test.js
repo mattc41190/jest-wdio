@@ -1,10 +1,10 @@
 const client = require('../wdio.setup.js');
 const searchView = require('./views/search.view.js');
-jest.setTimeout(60000);
 
 describe('Searchbox', () => {
 
 	beforeAll(() => {
+		jest.setTimeout(60000);
 		return this.client = client();
 	});
 

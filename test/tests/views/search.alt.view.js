@@ -9,13 +9,14 @@ class SearchView {
         this.client = client;
     }
 
-    get searchBox() { return this.client.element(selectors.searchBox); }
+    async getSearchBoxValue() {
+        return await this.client.getValue(selectors.searchBox);
+    }
 
-    set searchBox(value) {
-        return this.searchBox.waitUntil(this.searchBox.isVisible())
-        .then(() => {
-            return this.searchBox.setValue(value);
-        });
+    async setSearchBox(value) {
+        let searchBox = selectors.searchBox;
+        await this.client.waitForVisible(searchBox);
+        await this.client.setValue(searchBox, value);
     }
 }
 

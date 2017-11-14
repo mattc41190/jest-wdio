@@ -15,7 +15,10 @@ module.exports = {
     // Browser Options
     baseUrl: 'https://www.homeaway.com',
     desiredCapabilities: {
-		browserName: 'chrome'
+        browserName: 'chrome',
+        chromeOptions: {
+            args: ['--headless']
+        }
 	},
 
     // Test Options

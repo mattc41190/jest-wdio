@@ -4,19 +4,19 @@ const selectors = {
     searchBox: `#searchKeywords`
 }
 
-function searchBox(client) {
-    return client.element(selectors.searchBox);
+function searchBox() {
+    return browser.element(selectors.searchBox);
 }
 
-function setSearchBox(client, value) {
-    return searchBox(client)
-        .waitUntil(searchBox(client).isVisible()).then(() => {
-            return searchBox(client).setValue(value);
+function setSearchBox(value) {
+    return searchBox()
+        .waitUntil(searchBox().isVisible()).then(() => {
+            return searchBox().setValue(value);
         });
 }
 
-function getSearchBoxValue(client) {
-    return searchBox(client).getValue();
+function getSearchBoxValue() {
+    return searchBox().getValue();
 }
 
 module.exports = {
